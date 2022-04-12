@@ -26,16 +26,18 @@ class SideBar extends React.Component {
           >
             <FontAwesomeIcon icon={faTimes} pull="right" size="xs" />
           </Button>
-          <h3>react-bootstrap sidebar</h3>
+          <h3>CryptoMC</h3>
         </div>
 
         <Nav className="flex-column pt-2">
-          <p className="ml-3">Heading</p>
+          <div className="sidebar-second-header">
+          <p>Welcome to the<br/>most delicius Nft in the world</p>
+          </div>
 
           <Nav.Item className="active">
             <Nav.Link href="/">
               <FontAwesomeIcon icon={faHome} className="mr-2" />
-              Home
+              HOME
             </Nav.Link>
           </Nav.Item>
 
@@ -48,31 +50,39 @@ class SideBar extends React.Component {
           <Nav.Item>
             <Nav.Link href="/">
               <FontAwesomeIcon icon={faBriefcase} className="mr-2" />
-              About
+              INVENTORY
             </Nav.Link>
           </Nav.Item>
 
           <Nav.Item>
             <Nav.Link href="/">
               <FontAwesomeIcon icon={faImage} className="mr-2" />
-              Portfolio
+              TOOLS
             </Nav.Link>
           </Nav.Item>
 
           <Nav.Item>
             <Nav.Link href="/">
               <FontAwesomeIcon icon={faQuestion} className="mr-2" />
-              FAQ
+              DELIVERY
             </Nav.Link>
           </Nav.Item>
 
           <Nav.Item>
             <Nav.Link href="/">
               <FontAwesomeIcon icon={faPaperPlane} className="mr-2" />
-              Contact
+              SHOP
             </Nav.Link>
           </Nav.Item>
         </Nav>
+
+        <Nav.Item>
+            <Nav.Link href="/">
+              <FontAwesomeIcon icon={faPaperPlane} className="mr-2" />
+              WHITEPAPER
+            </Nav.Link>
+          </Nav.Item>
+       
       </div>
     );
   }

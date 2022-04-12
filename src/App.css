@@ -4,15 +4,38 @@
   align-items: stretch;
 }
 
-@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
-@import "https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,500,600,700";
+:root{
+  --first-color: #24252b;
+  --second-color:#131524;
+  --text-color: #e7e9ec;
+  --text-color2:#eba52c;
 
+  --generalFont: 'Montserrat', sans-serif;
+  --titleFont: 'AxeHandel';      
+
+}
+
+@font-face {
+  font-family: "AxeHandel";
+  src: url("./fonts/AxeHandel.ttf");
+}
 
 body {
-  /*font-family: 'Poppins', sans-serif;*/
-  font-family: 'Nunito Sans', sans-serif;
-  /*background: #fafafa;*/
-  background-color: #f5f9fc;
+  font-family: var(--generalFont);
+  background-color: var(--second-color);
+}
+
+h3{
+  font-family: var(--titleFont);
+  color: var(--text-color2);
+  font-size: 30px;
+}
+
+p{
+  color: var(--text-color);
+  font-size: 13px;
+  font-weight: 600;
+  margin: 0;
 }
 
 
@@ -25,15 +48,39 @@ a:focus {
 }
 
 /* ---------------------------------------------------
+    NAVBAR STYLE
+----------------------------------------------------- */
+.navbar{
+  background-color: var(--first-color);
+  padding: 0.5rem 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100px;
+  z-index: 1;
+}
+
+/* ---------------------------------------------------
     SIDEBAR STYLE
 ----------------------------------------------------- */
 .sidebar {
   min-width: 250px;
   max-width: 250px;
-  background: #354052;
-  color: #adb5bd;
+  background: var(--first-color);
+  color: var(--text-color);
   margin-left: -250px;
   transition: all 0.5s;
+}
+
+.sidebar-second-header{
+  background-color: var(--second-color);
+  border-radius: 20px;
+  margin: 13px 20px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .sidebar.is-open {
@@ -43,14 +90,15 @@ a:focus {
 
 
 .sidebar-header {
-  background: #313b4c;
-  color: #adb5bd;
+  background: var(--first-color);
+  color: var(--text-color);
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.sidebar-header h3{
-  color: #fff;
-  padding: 1em;
-}
+
 
 .sidebar ul p {
   color: #fff;
@@ -59,7 +107,7 @@ a:focus {
 
 .collapse.show, 
 .collapsing {
-  background: #313b4c;
+  background: var(--first-color);
 }
 
 .nav-item {
@@ -70,12 +118,12 @@ a:focus {
 
 .nav-item.open {
   color: #e9ecef;
-  background: #313b4c;
+  background: var(--first-color);
 }
 
 .nav-item.active {
   color: #e9ecef;
-  background: #2d3646 !important;
+  background: var(--second-color) !important;
 }
 
 .nav-item:hover {
@@ -109,9 +157,12 @@ li a.dropdown-toggle::after {
     CONTENT STYLE
 ----------------------------------------------------- */
 .content {
-  padding: 20px;
   margin-left: 0;
   height: 100vh;
+}
+
+.container-fluid{
+  padding: 0;
 }
 
 @media only screen and (max-width: 575.98px) {

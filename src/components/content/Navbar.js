@@ -8,11 +8,23 @@ import logo from "../../images/Navbar.png";
 class NavBar extends React.Component {
   render() {
     console.log(this.props.isOpen);
+
     return (
       <Navbar
         className="navbar shadow-sm mb-5"
         expand
       >
+        <div className="sidebar-header">
+          <Button
+            variant="link"
+            onClick={this.props.toggle}
+            style={{ color: "#fff" }}
+            className="mt-4"
+          >
+          </Button>
+          <img src={logo} alt="logo" className="logo-sidebar" />
+          <h3>CryptoMC</h3>
+        </div>
         <Button variant="outline-info" onClick={this.props.toggle}>
         
         {this.props.isOpen?<FontAwesomeIcon icon={faChevronLeft} />: <FontAwesomeIcon icon={faChevronRight} />}

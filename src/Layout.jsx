@@ -4,6 +4,7 @@ import "./App.css";
 import SideBar from "./components/sidebar/SideBar";
 import Content from "./components/content/Content";
 
+import NavBar from "./components/content/Navbar";
 class Layout extends React.Component {
   constructor(props) {
     super(props);
@@ -53,9 +54,17 @@ class Layout extends React.Component {
 
   render() {
     return (
-      <div className="App wrapper">
-        <SideBar toggle={this.toggle} isOpen={this.state.isOpen} />
-        <Content toggle={this.toggle} isOpen={this.state.isOpen} />
+      <div>
+        <div className="App wrapper row">
+        <NavBar toggle={this.toggle} isOpen={this.state.isOpen}/>
+          <div className={this.state.isOpen?"col-3":"col-0"}>
+          <SideBar toggle={this.toggle} isOpen={this.state.isOpen} />
+          </div>
+          <div className={this.state.isOpen?"col-9":"col-12"}>
+          <Content toggle={this.toggle} isOpen={this.state.isOpen} />
+          </div>
+        </div>
+
       </div>
     );
   }

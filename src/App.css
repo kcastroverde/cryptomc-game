@@ -7,6 +7,7 @@
 :root{
   --first-color: #24252b;
   --second-color:#131524;
+  --third-color: #33343c;
   --text-color: #e7e9ec;
   --text-color2:#eba52c;
 
@@ -53,11 +54,69 @@ a:focus {
 .navbar{
   background-color: var(--first-color);
   padding: 0.5rem 0;
-  position: fixed;
-  top: 0;
   width: 100%;
-  height: 100px;
+  height: 80px;
   z-index: 1;
+}
+
+.navbar-pancake{
+  margin-top: 10px;
+  margin-right: 20px;
+  background-color: var(--third-color);
+  font-family: var(--titleFont);
+  color: var(--text-color)!important;
+  width: 115px;
+  text-align: center;
+  height: 40px;
+  border-radius: 10px;
+}
+
+.navbar-claim{
+  margin-top: 10px;
+  margin-right: 20px;
+  background-color: var(--text-color2);
+  font-family: var(--titleFont);
+  color: var(--second-color)!important;
+  text-align: center;
+  height: 40px;
+  width: auto;
+  border-radius: 10px;
+}
+
+.navbar-account{
+  display: inline;
+  font-family: var(--titleFont);
+  color: var(--text-color);
+  font-size: 30px;
+  margin-right: 80px;
+  line-height: 0.6;
+  margin-top: 15px;
+  margin-left: 15px;
+}
+
+.navbar-bot-account{
+  font-family: var(--generalFont);
+  font-size: 15px;
+}
+
+
+.navbar-logo{
+  width: 60px;
+}
+
+.btn-outline-info{
+  color: var(--text-color2);
+  border-color: var(--text-color2);
+}
+
+.btn-outline-info:hover{
+  color: var(--text-color);
+  background-color: var(--text-color2);
+  border-color: var(--text-color2);
+}
+
+.btn-outline-info.focus, .btn-outline-info:focus{
+  box-shadow: 0 0 0 0.2rem rgba(231, 247, 2, 0.835);
 }
 
 /* ---------------------------------------------------
@@ -72,6 +131,10 @@ a:focus {
   transition: all 0.5s;
 }
 
+.logo-sidebar{
+  width: 60px;
+}
+
 .sidebar-second-header{
   background-color: var(--second-color);
   border-radius: 20px;
@@ -83,16 +146,36 @@ a:focus {
   text-align: center;
 }
 
+.sidebar-third-header{
+  background-color: var(--second-color);
+  border-radius: 20px;
+  margin: 13px 20px;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  text-align: left;
+}
+
+.redbox{
+  width: 50px;
+  margin-left: 20px;
+  transform: rotate(-20deg);
+}
+
 .sidebar.is-open {
   margin-left: 0;
   transition: .5s;
+}
+
+.sidebar-nav .nav-link{
+  margin-left: 10px;
 }
 
 
 .sidebar-header {
   background: var(--first-color);
   color: var(--text-color);
-  height: 100px;
+  height: 80px;
   display: flex;
   justify-content: center;
   align-items: center;

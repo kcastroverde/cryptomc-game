@@ -6,11 +6,12 @@ import {
   faPaperPlane,
   faQuestion,
   faImage,
-  faCopy,
   faTimes
 } from "@fortawesome/free-solid-svg-icons";
-import SubMenu from "./SubMenu";
+
 import { Nav, Button } from "react-bootstrap";
+import logo from "../../images/Navbar.png";
+import redbox from "../../images/redbox.png";
 import classNames from "classnames";
 
 class SideBar extends React.Component {
@@ -26,10 +27,11 @@ class SideBar extends React.Component {
           >
             <FontAwesomeIcon icon={faTimes} pull="right" size="xs" />
           </Button>
+          <img src={logo} alt="logo" className="logo-sidebar" />
           <h3>CryptoMC</h3>
         </div>
 
-        <Nav className="flex-column pt-2">
+        <Nav className="flex-column pt-2 sidebar-nav">
           <div className="sidebar-second-header">
           <p>Welcome to the<br/>most delicius Nft in the world</p>
           </div>
@@ -41,11 +43,10 @@ class SideBar extends React.Component {
             </Nav.Link>
           </Nav.Item>
 
-          <SubMenu
-            title="Pages"
-            icon={faCopy}
-            items={["Link", "Link2", "Active"]}
-          />
+          <div className="sidebar-third-header" >
+          <p>CryptoMC<br/>PLAY & EARN</p>
+          <img src={redbox} alt="redbox" className="redbox" />
+          </div>
 
           <Nav.Item>
             <Nav.Link href="/">
@@ -68,6 +69,10 @@ class SideBar extends React.Component {
             </Nav.Link>
           </Nav.Item>
 
+          <div className="sidebar-third-header">
+          <p>CRYPTOMC<br/>GET READY</p>
+          </div>
+          
           <Nav.Item>
             <Nav.Link href="/">
               <FontAwesomeIcon icon={faPaperPlane} className="mr-2" />

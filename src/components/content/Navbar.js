@@ -1,23 +1,32 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAlignLeft } from "@fortawesome/free-solid-svg-icons";
+import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
+import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { Navbar, Button, Nav } from "react-bootstrap";
+import logo from "../../images/Navbar.png";
 
 class NavBar extends React.Component {
   render() {
+    console.log(this.props.isOpen);
     return (
       <Navbar
         className="navbar shadow-sm mb-5"
         expand
       >
-
+        <Button variant="outline-info" onClick={this.props.toggle}>
+        
+        {this.props.isOpen?<FontAwesomeIcon icon={faChevronLeft} />: <FontAwesomeIcon icon={faChevronRight} />}
+        </Button>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ml-auto" navbar>
-            <Nav.Link href="#">page</Nav.Link>
-            <Nav.Link href="#">page</Nav.Link>
-            <Nav.Link href="#">page</Nav.Link>
-            <Nav.Link href="#">page</Nav.Link>
+            <Nav.Link className="navbar-pancake" href="#">BUY $CMC</Nav.Link>
+            <Nav.Link className="navbar-claim" href="#">CLAIM 23.039 $CMC</Nav.Link>
+            <img src={logo} alt="logo" className="navbar-logo"/>
+            <div className="navbar-account">
+              0 &nbsp;  $CMC <br/>
+              <span className="navbar-bot-account">0X0000_00000</span> 
+            </div>
           </Nav>
         </Navbar.Collapse>
       </Navbar>

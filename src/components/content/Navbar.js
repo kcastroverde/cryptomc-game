@@ -4,6 +4,7 @@ import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { Navbar, Button, Nav } from "react-bootstrap";
 import logo from "../../images/Navbar.png";
+import pancake from "../../images/icons/pancakeswap.png"
 
 class NavBar extends React.Component {
   render() {
@@ -31,9 +32,9 @@ class NavBar extends React.Component {
         </Button>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="ml-auto" navbar>
-            <Nav.Link className="navbar-pancake" href="#">BUY $CMC</Nav.Link>
-            <Nav.Link className="navbar-claim" href="#">CLAIM 23.039 $CMC</Nav.Link>
+          <Nav className="ml-auto navbar-buttons" navbar>
+            <a className="navbar-pancake" href="#" target="_blank"><img src={pancake} alt=""/>BUY $CMC</a>
+            <button className="navbar-claim" href="#">CLAIM 23.039 $CMC</button>
             <img src={logo} alt="logo" className="navbar-logo"/>
             <div className="navbar-account">
               0 &nbsp;  $CMC <br/>

@@ -22,8 +22,8 @@ class SideBar extends React.Component {
 
 
           <NavLink className="NavItem" to="/home">
-              <img className="sidebar-icon" src={home} alt="home" />
-              HOME
+            <img className="sidebar-icon" src={home} alt="home" />
+            HOME
           </NavLink>
 
 
@@ -33,41 +33,39 @@ class SideBar extends React.Component {
           </div>
 
           <NavLink className="NavItem" to="/inventory">
-              <img className="sidebar-icon" src={Hamburguesa} alt="hamburguesa" />
-              INVENTORY
+            <img className="sidebar-icon" src={Hamburguesa} alt="hamburguesa" />
+            INVENTORY
           </NavLink>
 
 
 
-          <NavLink className="NavItem"  to="/tools">
-              <img className="sidebar-icon" src={Gasolina} alt="gasolina" />
-              TOOLS
+          <NavLink className="NavItem" to="/tools">
+            <img className="sidebar-icon" src={Gasolina} alt="gasolina" />
+            TOOLS
           </NavLink>
 
-          <NavLink className="NavItem"  to="/delivery">
-              <img className="sidebar-icon" src={cajitaFeliz} alt="cajita" />
-              DELIVERY
+          <NavLink className="NavItem" to="/delivery">
+            <img className="sidebar-icon" src={cajitaFeliz} alt="cajita" />
+            DELIVERY
           </NavLink>
 
           <div className="sidebar-third-header">
             <p>CRYPTOMC<br />GET READY</p>
           </div>
 
-          <NavLink className="NavItem"  to="/shop">
-              <img className="sidebar-icon" src={Shop} alt="shop" />
-              SHOP
+          <NavLink className="NavItem" to="/shop">
+            <img className="sidebar-icon" src={Shop} alt="shop" />
+            SHOP
           </NavLink>
-        <div className="line"></div>
-          <NavLink className="NavItem"  to="/whitepaper">
-              <img className="sidebar-icon" src={whitepaper} alt="whitepaper" />
-              WHITEPAPER
-           </NavLink>
+          <div className="line"></div>
+          <NavLink className="NavItem" to="/whitepaper">
+            <img className="sidebar-icon" src={whitepaper} alt="whitepaper" />
+            WHITEPAPER
+          </NavLink>
         </Nav>
-      <div className="sidebar-version">
-        ver 0.0.1
-      </div>
-
-
+        <div className="sidebar-version">
+          ver 0.0.1
+        </div>
       </div>
     );
   }

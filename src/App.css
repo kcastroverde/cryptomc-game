@@ -275,11 +275,12 @@ li a.dropdown-toggle::after {
     CONTENT STYLE
 ----------------------------------------------------- */
 .content {
-
+  border:#e7e9ec 3px solid;
+  border-radius: 10px;
   margin-top: 100px;
-  height: 100vh;
+  height: 80vh;
   color: #fff;
-  font-size: 100px;
+  font-size: 60px;
 }
 
 

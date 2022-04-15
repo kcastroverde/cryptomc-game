@@ -55,7 +55,7 @@ a:focus {
   padding: 0.5rem 0;
   width: 102vw;
   height: 80px;
-  z-index: 1;
+  z-index: 2;
   position: fixed;
   top: 0;
 }
@@ -125,6 +125,7 @@ a:focus {
     SIDEBAR STYLE
 ----------------------------------------------------- */
 .sidebar {
+  margin-top: 80px;
   min-width: 250px;
   max-width: 250px;
   background: var(--first-color);
@@ -132,7 +133,11 @@ a:focus {
   margin-left: -250px;
   transition: all 0.5s;
   height: 100vh;
+  padding-top: 10px;
+}
 
+#sidebar{
+  z-index: 1;
 }
 
 .nav{
@@ -177,7 +182,7 @@ a:focus {
 
 .NavItem{
   padding-left: 20px;
-  height: 60px;
+  height: 50px;
   display: flex;
   align-items: center;
   font-weight: 600;
@@ -246,23 +251,33 @@ li a.dropdown-toggle::after {
   display: none;
 }
 
+.sidebar-version{
+  margin-top: 30px;
+  text-align: center;
+}
 
 /* ---------------------------------------------------
     CONTENT STYLE
 ----------------------------------------------------- */
 .content {
-  margin-left: 0;
+
   margin-top: 100px;
   height: 100vh;
   color: #fff;
   font-size: 100px;
 }
 
+
+
 .container-fluid{
   padding: 0;
 }
 
-
+@media (max-width: 992px) { 
+  .content{
+    padding-left: 60px;
+  }
+ }
 
 @media only screen and (max-width: 575.98px) {
   body {
@@ -287,11 +302,7 @@ li a.dropdown-toggle::after {
     display: block;
   }
   
-  li a.dropdown-toggle::after {
-    display: inline-block;
-    position: relative;
-    left: 68%;
-  }
+
   
 }
 

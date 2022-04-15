@@ -15,7 +15,7 @@ class SideBar extends React.Component {
     return (
       <div className={classNames("sidebar", { "is-open": this.props.isOpen })}>
 
-        <Nav className="pt-2 sidebar-nav">
+        <Nav className="sidebar-nav">
           <div className="sidebar-second-header">
             <p>Welcome to the<br />most delicius Nft in the world</p>
           </div>
@@ -57,13 +57,15 @@ class SideBar extends React.Component {
               <img className="sidebar-icon" src={Shop} alt="shop" />
               SHOP
           </NavLink>
-
+        <div className="line"></div>
           <NavLink className="NavItem"  to="/whitepaper">
               <img className="sidebar-icon" src={whitepaper} alt="whitepaper" />
               WHITEPAPER
            </NavLink>
         </Nav>
-
+      <div className="sidebar-version">
+        ver 0.0.1
+      </div>
 
 
       </div>

@@ -57,10 +57,10 @@ class Layout extends React.Component {
       <div>
         <div className="App wrapper row">
         <NavBar toggle={this.toggle} isOpen={this.state.isOpen}/>
-          <div className={this.state.isOpen?"col-3":"col-0"}>
+          <div id="sidebar" className={this.state.isOpen?"col-md-3  col-sm-4":"col-0"}>
           <SideBar toggle={this.toggle} isOpen={this.state.isOpen} />
           </div>
-          <div className={this.state.isOpen?"col-9":"col-12"}>
+          <div id="content" className={this.state.isOpen?"col-md-9 col-sm-8":"col-12"}>
           <Content toggle={this.toggle} isOpen={this.state.isOpen} />
           </div>
         </div>

@@ -289,9 +289,18 @@ li a.dropdown-toggle::after {
   padding: 0;
 }
 
+@media (min-width: 1200px) {
+  .content {
+    margin-left: 50px;
+    width: calc(100% - 50px);
+  }
+ }
+
+
 @media (max-width: 992px) { 
   .content{
-    padding-left: 60px;
+    margin-left: 40px;
+    width: 95%;
   }
  }
 

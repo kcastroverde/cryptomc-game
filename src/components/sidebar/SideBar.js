@@ -28,7 +28,7 @@ class SideBar extends React.Component {
 
 
           <div className="sidebar-third-header" >
-            <p>CryptoMC<br />PLAY & EARN</p>
+            <p><span style={{color:"#eba52c"}}>CryptoMC</span><br />PLAY & EARN</p>
             <img src={redbox} alt="redbox" className="redbox" />
           </div>
 
@@ -50,7 +50,7 @@ class SideBar extends React.Component {
           </NavLink>
 
           <div className="sidebar-third-header">
-            <p>CRYPTOMC<br />GET READY</p>
+            <p><span style={{color:"#eba52c"}}>CryptoMC</span><br />GET READY</p>
           </div>
 
           <NavLink className="NavItem" to="/shop">

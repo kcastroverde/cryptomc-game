@@ -146,6 +146,7 @@ export default function Inventory() {
                 <>
                 <div className='progress-box'>
                 <div className='inventory-item-progressBar'>
+                  <div className='inventory-item-progressBar-fill' style={{width: `${item.progressBar/item.progressBarMax*100}%`}}></div>
                 </div>
                 </div>
                 <div className='inventory-item-actualprogress'>

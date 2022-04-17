@@ -74,7 +74,6 @@
   }
 
   .inventory-item-info{
-    border: 5px solid pink;
     width: 70%;
     height: 100%;
     margin-left: auto;
@@ -112,7 +111,7 @@
   }
 
   .inventory-item-info-name{
-    font-size: 16px;
+    font-size: 18px;
     text-align: end;
     font-weight: 600;
     margin-top: 1px;
@@ -138,10 +137,14 @@
     font-size: 18px;
   }
   .inventory-item-sellbtn button{
-    
+    border-radius: 10px;
     margin-right: 20px;
-    width: 60px;
-    height: 40px;
+    width: 80px;
+    height: 35px;
+    background-color: var(--third-color);
+    border: none;
+    color: white;
+    margin-top: 5px;
   }
 
   .progress-box{
@@ -149,7 +152,7 @@
     height: 15px;
   }
   .inventory-item-progressBar{
-    border: solid 1px white;
+    border: solid 2px var(--text-color2);
     margin-left: 20px;
     height: 10px;
     border-radius: 10px;

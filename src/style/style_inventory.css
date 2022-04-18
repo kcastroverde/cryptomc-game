@@ -54,11 +54,11 @@
     height: 170px;
     min-height: 170px;
     max-height: 170px;
-    border: 2px solid rgb(57, 193, 243);
+    border: 2px solid rgb(0, 0, 0);
     border-radius: 10px;
     width: 274px;
     max-width: 350px;
-    min-width: 274px;
+    min-width: 330px;
     position:relative;
     overflow: hidden;
   }

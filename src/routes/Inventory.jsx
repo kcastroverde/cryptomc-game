@@ -115,13 +115,26 @@ const items = [
 export default function Inventory() {
   const notification = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, delectus placeat in repudiandae fugiat rerum impedit aliquid, quibusdam veniam ex, iusto facilis? Ducimus voluptas repudiandae repellendus enim porro? Minus, perspiciatis?"
 
+  const common = 'rgb(106,106,106)'
+  const uncommon = 'linear-gradient(90deg, rgba(38,32,208,1) 0%, rgba(5,3,74,1) 86%)';
+  const rare = 'linear-gradient(90deg, rgba(167,32,208,1) 0%, rgba(46,3,74,1) 86%)';
+  const legendary = 'linear-gradient(90deg, rgba(208,178,32,1) 0%, rgba(74,72,3,1) 86%)';
 
   return (
     <section className="content-side-inventory">
       <Notification notification={notification} />
       <div className='inventory-selection row'>
         {items.map((item) => (
-          <div className='inventory-item' key={item.id}>
+          <div className='inventory-item' key={item.id}
+          style={{
+            background:{
+              'Common': common,
+              'Uncommon': uncommon,
+              'Rare': rare,
+              'Legendary': legendary
+            }[item.rarity]
+          }}
+          >
             <div className='inventory-item-image'>
               <img src={item.image} alt={item.name} />
             </div>

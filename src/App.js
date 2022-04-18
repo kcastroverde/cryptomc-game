@@ -13,6 +13,7 @@ export default function App() {
         <Routes>
             <Route path="/" element={<Layout/>}>
               <Route path="/home" element={<Home/>}/>
+              <Route index element={<Inventory/>}/>
               <Route path="/inventory" element={<Inventory/>}/>
               <Route path="/tools" element={<Tools/>}/>
               <Route path="/delivery" element={<Delivery/>}/>

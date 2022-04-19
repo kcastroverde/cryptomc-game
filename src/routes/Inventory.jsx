@@ -113,7 +113,7 @@ const items = [
 
 
 export default function Inventory() {
-  const notification = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, delectus placeat in repudiandae fugiat rerum impedit aliquid, quibusdam veniam ex, iusto facilis? Ducimus voluptas repudiandae repellendus enim porro? Minus, perspiciatis?"
+  const notification = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, delectus placeat in repudiandae fugiat.";
 
   const common = 'rgb(106,106,106)'
   const uncommon = 'linear-gradient(90deg, rgba(38,32,208,1) 0%, rgba(5,3,74,1) 86%)';

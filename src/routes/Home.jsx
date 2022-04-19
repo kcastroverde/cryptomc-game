@@ -3,7 +3,7 @@ import Notification from '../components/notification/Notification'
 import "../style/style_home.css"
 export default function Home() {
 
-  const notification = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, delectus placeat in repudiandae fugiat rerum impedit aliquid, quibusdam veniam ex, iusto facilis? Ducimus voluptas repudiandae repellendus enim porro? Minus, perspiciatis?"
+  const notification = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, delectus placeat in repudiandae fugiat."
 
   return (
     <section className='content-side-home'>

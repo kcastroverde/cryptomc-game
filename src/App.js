@@ -19,7 +19,6 @@ export default function App() {
               <Route path="/delivery" element={<Delivery/>}/>
               <Route path="/shop" element={<Shop/>}/>
               <Route path="/whitepaper" element={<Whitepaper/>}/>
-
             </Route>
         </Routes>
     </HashRouter>

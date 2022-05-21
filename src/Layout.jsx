@@ -60,7 +60,7 @@ class Layout extends React.Component {
           <div id="sidebar" className={this.state.isOpen?"col-xl-2 col-md-3  col-sm-4":"col-0"}>
           <SideBar toggle={this.toggle} isOpen={this.state.isOpen} />
           </div>
-          <div id="content" className={this.state.isOpen?"col-xl-10 col-md-9 col-sm-8":"col-12"}>
+          <div id="content" className="col">
           <Content toggle={this.toggle} isOpen={this.state.isOpen} />
           </div>
         </div>

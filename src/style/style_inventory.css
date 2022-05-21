@@ -11,7 +11,7 @@
     "selection selection selection"
     "selection selection selection"
     "selection selection selection";
-    border: 2px solid red;
+    
     width: 100%;
     height: 100%;
     justify-content: center;
@@ -27,7 +27,7 @@
     margin: auto;
     height: 100%;
     width: 100%;
-    border: 2px solid green
+    
   }
 
   .inventory-selection::-webkit-scrollbar-track

@@ -9,6 +9,8 @@
   --third-color: #33343c;
   --text-color: #e7e9ec;
   --text-color2:#eba52c;
+  --transparent-color: #333333ba;
+  
 
   --generalFont: 'Montserrat', sans-serif;
   --titleFont: 'AxeHandel';      
@@ -279,7 +281,7 @@ li a.dropdown-toggle::after {
     CONTENT STYLE
 ----------------------------------------------------- */
 .content {
-  border:#e7e9ec 3px solid;
+  
   border-radius: 10px;
   margin-top: 100px;
   height: 80vh;
@@ -288,6 +290,8 @@ li a.dropdown-toggle::after {
   display: flex;
   justify-content: center;
   align-items: center;
+  justify-items: center;
+  
 }
 
 .header{
@@ -304,7 +308,7 @@ li a.dropdown-toggle::after {
 }
 
 .notification{
-  border: solid 3px white;
+  
   width: 80%;
   margin-right:10px; 
   padding: 20px;
@@ -346,7 +350,7 @@ li a.dropdown-toggle::after {
 }
 
 .market-link{
-  border: solid 3px white;
+  
   width: 20%;
   border-radius: 20px;
   display: flex;

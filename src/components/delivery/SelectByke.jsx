@@ -13,7 +13,7 @@ export default function SelectByke(props) {
     initial={{ scale: 0 }}
     animate={{ scale: 1 }}
     exit={{ scale: 0 }}
-    ease={'easeOut'}
+    transition={{ type: 'spring', stiffness: 80 }}
     >
         <div className='closeButton' onClick={()=>props.close()}>X</div>
         <h2>Motor Bike Inventory</h2>

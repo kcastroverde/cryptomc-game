@@ -296,7 +296,7 @@ li a.dropdown-toggle::after {
 
 .header{
   grid-area: header;  
-  border: line 3px solid white;
+  
   display: flex;
   justify-content: center;
   align-items: center;

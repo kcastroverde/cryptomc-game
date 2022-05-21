@@ -1,4 +1,5 @@
 import React from 'react'
+import {useState} from 'react'
 import SelectByke from '../components/delivery/SelectByke';
 import StartBox from '../components/delivery/StartBox';
 import "../style/style_delivery.css";
@@ -49,10 +50,23 @@ let bikes = [
 ]
 
 export default function Delivery() {
+  const [choiceEmpty, setChoiceEmpty] = useState(true);
+  const [showBykes, setShowBykes] = useState(false);
+
+  const openInventoryBykes = () => {
+    setChoiceEmpty(false);
+    setShowBykes(true);
+  }
+
+  const close = () => {
+    setChoiceEmpty(true);
+    setShowBykes(false);
+  }
+
   return (
     <section className='content-side-delivery'>
-      {/* <StartBox/> */}
-      <SelectByke bikes={bikes}/>
+      {choiceEmpty? <StartBox openBykes={openInventoryBykes}/>:null}
+      {showBykes?<SelectByke bikes={bikes} close={close}/>:null}
     </section>
   )
 }

@@ -8,6 +8,7 @@ export default function SelectByke(props) {
 
   return (
     <div className='invetoryOpen'>
+        <div className='closeButton' onClick={()=>props.close()}>X</div>
         <h2>Motor Bike Inventory</h2>
         <div className='inventory-select'>
         {props.bikes.map((bike, index)=>(

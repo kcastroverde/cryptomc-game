@@ -58,7 +58,7 @@ export default function Delivery() {
     setShowBykes(true);
   }
 
-  const close = () => {
+  const closeInventoryBykes = () => {
     setChoiceEmpty(true);
     setShowBykes(false);
   }
@@ -66,7 +66,7 @@ export default function Delivery() {
   return (
     <section className='content-side-delivery'>
       {choiceEmpty? <StartBox openBykes={openInventoryBykes}/>:null}
-      {showBykes?<SelectByke bikes={bikes} close={close}/>:null}
+      {showBykes?<SelectByke bikes={bikes} close={closeInventoryBykes}/>:null}
     </section>
   )
 }

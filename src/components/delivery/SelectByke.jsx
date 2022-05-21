@@ -3,11 +3,17 @@ import React from 'react'
 import MotoA from '../../images/tools/MotoA.png'
 import MotoB from '../../images/tools/MotoB.png'
 import MotoC from '../../images/tools/MotoC.png'
+import { motion } from 'framer-motion'
 
 export default function SelectByke(props) {
 
   return (
-    <div className='invetoryOpen'>
+    <motion.div 
+    className='invetoryOpen'
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    exit={{ opacity: 0 }}
+    >
         <div className='closeButton' onClick={()=>props.close()}>X</div>
         <h2>Motor Bike Inventory</h2>
         <div className='inventory-select'>
@@ -40,6 +46,6 @@ export default function SelectByke(props) {
             </div>
         ))}
         </div>
-    </div>
+    </motion.div>
   )
 }

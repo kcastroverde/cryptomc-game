@@ -29,6 +29,12 @@
     object-fit: cover;
     margin: 10px;
     cursor: pointer;
+    transition: 0.5s transform;
+}
+
+.imgbox img:hover{
+    transform: scale(1.1);
+    transition-delay: 0.5;
 }
 
 .invetoryOpen{

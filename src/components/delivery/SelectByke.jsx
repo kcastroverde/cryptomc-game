@@ -10,9 +10,10 @@ export default function SelectByke(props) {
   return (
     <motion.div 
     className='invetoryOpen'
-    initial={{ opacity: 0 }}
-    animate={{ opacity: 1 }}
-    exit={{ opacity: 0 }}
+    initial={{ scale: 0 }}
+    animate={{ scale: 1 }}
+    exit={{ scale: 0 }}
+    ease={'easeOut'}
     >
         <div className='closeButton' onClick={()=>props.close()}>X</div>
         <h2>Motor Bike Inventory</h2>

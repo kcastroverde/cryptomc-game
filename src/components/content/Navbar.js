@@ -1,14 +1,28 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { Navbar, Button, Nav } from "react-bootstrap";
 import logo from "../../images/Navbar.png";
 import pancake from "../../images/icons/pancakeswap.png"
+import { useDispatch, useSelector } from "react-redux";
+import { fetchUser } from "../../redux/user/userActions";
+import { fetchInventoryData } from "../../redux/inventory/inventoryActions";
 
 class NavBar extends React.Component {
   render() {
-    console.log(this.props.isOpen);
+    const user = useSelector((state) => state.user);
+    const inventory = useSelector((state) => state.inventory);
+
+    console.log("user", user);
+    console.log("inventory", inventory);
+    
+    const dispatch = useDispatch();
+
+    useEffect(()=>{
+      dispatch(fetchUser())
+      dispatch(fetchInventoryData())
+    },[dispatch])
 
     return (
       <Navbar

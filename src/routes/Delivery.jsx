@@ -1,5 +1,7 @@
 import React from 'react'
 import {useState} from 'react'
+import { useEffect } from 'react';
+import BykeforRun from '../components/delivery/BykeforRun';
 import SelectByke from '../components/delivery/SelectByke';
 import StartBox from '../components/delivery/StartBox';
 import "../style/style_delivery.css";
@@ -52,6 +54,7 @@ let bikes = [
 export default function Delivery() {
   const [choiceEmpty, setChoiceEmpty] = useState(true);
   const [showBykes, setShowBykes] = useState(false);
+  const [selectedByke, setSelectedByke] = useState(null);
 
   const openInventoryBykes = () => {
     setChoiceEmpty(false);
@@ -59,14 +62,33 @@ export default function Delivery() {
   }
 
   const closeInventoryBykes = () => {
+    if(selectedByke === null){
     setChoiceEmpty(true);
+    }
     setShowBykes(false);
   }
 
+  const selectedBykeHandler = (bike) => {
+    setSelectedByke(bike);
+    setChoiceEmpty(false);
+    setShowBykes(false);
+  }
+
+  useEffect(()=>{
+    if(selectedByke === null){
+      setChoiceEmpty(true);
+    }else{
+      console.log(selectedByke)
+    }
+    
+  },[selectedByke])
+
+  
   return (
     <section className='content-side-delivery'>
       {choiceEmpty? <StartBox openBykes={openInventoryBykes}/>:null}
-      {showBykes?<SelectByke bikes={bikes} close={closeInventoryBykes}/>:null}
+      <SelectByke selectByke={selectedBykeHandler} showBykes={showBykes} bikes={bikes} close={closeInventoryBykes}/>
+      {selectedByke? <BykeforRun byke={selectedByke} />:null}
     </section>
   )
 }

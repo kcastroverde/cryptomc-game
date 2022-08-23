@@ -1,4 +1,5 @@
 import React from "react";
+import { useEffect } from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import SideBar from "./components/sidebar/SideBar";
@@ -33,20 +34,16 @@ class Layout extends React.Component {
     this.previousWidth = width;
   }
 
-  /**
-   * Add event listener
-   */
-  componentDidMount() {
-    this.updateWidth();
-    window.addEventListener("resize", this.updateWidth.bind(this));
-  }
 
-  /**
-   * Remove event listener
-   */
-  componentWillUnmount() {
-    window.removeEventListener("resize", this.updateWidth.bind(this));
-  }
+  componentWillMount() {
+     this.updateWidth();
+     window.addEventListener("resize", this.updateWidth.bind(this));
+   }
+
+ 
+   componentWillUnmount() {
+     window.removeEventListener("resize", this.updateWidth.bind(this));
+   }
 
   toggle = () => {
     this.setState({ isOpen: !this.state.isOpen });

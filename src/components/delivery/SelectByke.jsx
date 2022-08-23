@@ -3,16 +3,22 @@ import React from 'react'
 import MotoA from '../../images/tools/MotoA.png'
 import MotoB from '../../images/tools/MotoB.png'
 import MotoC from '../../images/tools/MotoC.png'
-import { motion } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 
 export default function SelectByke(props) {
+    console.log(props.showBykes)
+
 
   return (
+  
+    <AnimatePresence>
+        {props.showBykes &&(
     <motion.div 
+    key={props.showBykes}
     className='invetoryOpen'
     initial={{ scale: 0 }}
     animate={{ scale: 1 }}
-    exit={{ scale: 0 }}
+    exit={{ opacity: 0, y:200, transition: { duration: 0.5 } }}
     transition={{ type: 'spring', stiffness: 80 }}
     >
         <div className='closeButton' onClick={()=>props.close()}>X</div>
@@ -42,11 +48,16 @@ export default function SelectByke(props) {
                     </div>
                 </div>
                 <div className='item-footer'>
-                    <button className='btn-select'>Select</button>
+                    <button onClick={()=>props.selectByke(bike)} className='btn-select'>Select</button>
+                    
                 </div>
             </div>
         ))}
         </div>
     </motion.div>
+        )}
+    </AnimatePresence>
+    
+    
   )
 }
